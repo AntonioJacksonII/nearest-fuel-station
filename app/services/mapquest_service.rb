@@ -12,6 +12,10 @@ class MapquestService
       req.params['to'] = to
       req.params['outFormat'] = 'json'
     end
-    JSON.parse(response.body, symbolize_names: true)
+    @results = JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def distance
+    require "pry"; binding.pry
   end
 end
