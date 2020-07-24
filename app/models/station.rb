@@ -16,4 +16,8 @@ class Station
     @fuel_type = attributes[:fuel_type_code]
     @access_times = attributes[:access_days_time]
   end
+
+  def address
+    @street + ", " + @city + " " +  @state + " " + @zip
+  end
 end
