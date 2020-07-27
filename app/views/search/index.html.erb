@@ -2,5 +2,6 @@
 <p id='address'>Address: <%= @station.address %></p>
 <p id='fuel_type'>Fuel Type: <%= @station.fuel_type %></p>
 <p id='access_times'>Access Times: <%= @station.access_times %></p>
-<p>Directions: <%= @directions %></p>
-<p>Distance: <%= @distance %></p>
+<p id='directions'>Directions: <%= @directions.maneuvers_narrative %></p>
+<p id='distance'>Distance: <%= @directions.distance %> miles</p>
+<p id='travel_time'>Travel Time: <%= @directions.travel_time %></p>

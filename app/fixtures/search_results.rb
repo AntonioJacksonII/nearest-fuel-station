@@ -7,11 +7,7 @@ class SearchResults
   end
 
   def directions(from, to)
-    narrative = ''
     json = MapquestService.new.directions(from, to)
-    json[:route][:legs].first[:maneuvers].each do |maneuver|
-      narrative += " #{maneuver[:narrative]}"
-    end
-    narrative
+    Direction.new(json)
   end
 end

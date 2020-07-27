@@ -10,6 +10,7 @@ class NRELService
     response = conn.get('/api/alt-fuel-stations/v1/nearest.json') do |req|
       req.params['location'] = location
       req.params['limit'] = 1
+      req.params['fuel_type'] = 'ELEC'
     end
     JSON.parse(response.body, symbolize_names: true)
   end
